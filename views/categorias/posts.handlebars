@@ -1,0 +1,17 @@
+<input type="text" value="{{categoria}}">
+{{#each postagens}}
+    <div class="card mt-3">
+        <div class="card-body">
+            <h5 class="card-title">{{titulo}}</h5>
+            <p class="card-text">{{descricao}}</p>
+            <a href="/postagem/{{slug}}"><button class="btn btn-success">Ler mais</button></a>
+            <hr>
+            <small><strong>Categoria: </strong>{{categoria.nome}}</small>
+            <br>
+            <small><strong>Data de publicação: </strong>{{date}}</small>
+        </div>
+    </div>
+
+{{else}}
+    <h5>Nenhuma postagem</h5>
+{{/each}}
